@@ -31,5 +31,6 @@ def test_dish():
     with pytest.raises(TypeError, match="Dish price must be float."):
         Dish("a", "a")
     valueError = "Dish price must be greater then zero."
+
     with pytest.raises(ValueError, match=valueError):
         Dish("a", -1)
